@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Poppins:wght@400;700&family=Signika:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+
+header{
+    background-color: #194E80;
+    height: 60px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+}
+
+
+header ul li:first-child{
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+   margin-left: 40px;
+}
+
+
+header ul li a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li a:hover{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li a:active{
+    transition: scale(0.95);
+}
+
+header ul li a.donation{
+    background-color: #EB4796;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+header ul li a.donation:hover{
+    color: #000000;
+}
+
+.logo{
+    height: 40px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #194E80;
+}
+
+.sidebar li{
+    height: 60px;
+    position: relative;
+    top: 30px;
+}
+
+.sidebar .donation2{
+    background-color: #EB4796;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 20px
+}
+
+.sidebar .donation2:hover{
+    color: #000000;
+}
+
+.aside{
+    margin: 0;
+    padding: 0;
+    width: 99.2vw;
+    height: 700px;
+    background: linear-gradient(to bottom, #205F9D 5%,#5C4A8F 80%, rgba(187, 62, 142, 0.9));
+    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.9);
+}
+
+.aside .container{
+    display: flex;
+    flex-direction: column;
+    padding: 150px;
+    margin-left: 80px;
+    gap: 80px;
+    font-size: 17px;
+}
+
+.aside p, h1{
+    max-width: 400px;
+    text-align: center;
+    color: white;
+
+}
+
+.aside .donation-btn{
+    background-color: #EB4796;
+    color: white;
+    font-family: "Poppins", "sans-serif";
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Poppins";
+    font-weight: 100;
+}
+
+.container .btn{
+    margin-left: 120px;
+}
+
+.container-equipe{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: -444px;
+    margin-right: 50px;
+    margin-left: 700px;
+    height: auto;
+    width: 800px;
+}
+
+.aside2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.aside2 h1{
+    color: #3491E6;
+    font-family: "Poppins";
+}
+
+.caixa-aside2{
+    gap: 150px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.caixa1, .caixa2, .caixa3{
+    background-color: #BB3E8E;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    text-align: center;
+    gap: 15px;
+    padding: 25px;
+}
+
+footer{
+    background-color: #194E80;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+footer .copy{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+footer h1{
+    font-family: "Carattere", "cursive";
+    font-weight: 200;
+    font-size: 39px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.galeria{
+    margin-top: 20px;
+}
+
+footer .logo-baseboard{
+    height: 80px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+footer .baseboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    width: 70%;
+}
+
+footer .baseboard h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+footer .baseboard p{
+    margin-bottom: 10px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .baseboard img{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 5px; 
+}
+
+footer .baseboard a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Mobile e tablets*/
+@media (max-width: 1024px){
+    .hideMobile{
+        display: none;
+    }
+
+    .aside{
+        height: auto;
+        width: 100vw;
+        padding-bottom: 10px;
+    }
+
+    .aside .container{
+        padding: 40px 20px;
+        margin-left: 0;
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aside h1, .aside p{
+        max-width: 100%;
+        font-size: 22px;
+    }
+
+    .aside .donation-btn{
+        margin-left: 0;
+        width: 100%;
+        max-width: 150px;
+        font-size: 13px;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        position: relative;
+        top: 290px;
+        margin-right: 120px;
+    }
+
+    .container-equipe{
+        margin: 0;
+        justify-content: center;
+        position: relative;
+        top: 50px;
+    }
+
+    .container-equipe img{
+        max-width: 40%;
+        height: auto;
+    }
+
+    .aside2 {
+        gap: 60px;
+        margin-top: 60px;
+        padding: 0 50px;
+    }
+
+    .caixa-aside2 {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .caixa1, .caixa2, .caixa3 {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    footer .galeria{
+        display: flex;
+    }
+
+    footer .galeria img{
+        width: 90%;
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .baseboard{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .baseboard p{
+        padding: 0 5px;
+    }
+}
+
+@media (min-width: 1024px){
+    .hideDesktop{
+        display: none;
+    }
+}
+/*fim mobile e tablets*/
