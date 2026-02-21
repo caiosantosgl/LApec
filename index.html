@@ -8,59 +8,109 @@
 </head>
 <body>
     <header>
-            <ul>
-                <li>
-                    <a href="/index.html"><img src="IMG/logo.png" alt="" class="logo"></a>
-                </li>
-                <li class="hideMobile"><a href="#">Home</a></li>
-                <li class="hideMobile"><a href="#">Sobre nós</a></li>
-                <li class="hideMobile"><a href="#">Contato</a></li>
-                <li class="hideMobile"><a href="#" class="donation">Doe Agora</a></li>
-                <li class="hideDesktop" onclick=showSidebar()><a href="#"><img src="IMG/menu.svg" alt=""></a></li>
-            </ul>
 
-            <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><img src="IMG/close.svg" alt=""></a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Ações</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#" class="donation2">Doe Agora</a></li>
+        <!-- Topbar -->
+        <div id="topbar">
+
+            <div class="logo-topbar"><i class="fa-solid fa-heart"></i> Contribua</div>
+            
+            <!--Topbar Desktop-->
+            <div id="info-desktop">
+
+                <p id="pix">Pix CNPJ: 42365 439/0001-68</p>
+                <button class="topb" ><i class="fa-regular fa-copy"></i>Copiar chave</button>
+                <p id="contato">Contato: (83) 99834-0051 / (83) 99834-0054 </p>
+                
+            </div>
+            
+            <!-- Topbar mobile -->
+            <div id="info-mobile">
+
+                <div id="pix-mobile" style="gap: 14px;">
+                    <p>CNPJ: 42365 439/0001-68</p>
+                    <button class="topb"><i class="fa-regular fa-copy"></i></button>
+                </div>
+
+
+                <button class="topb" id="bnt-pix"><i class="fa-brands fa-pix"></i></button>
+                <button class="topb" id="contato-mobile"><i class="fa-solid fa-phone"></i></button>
+
+            </div>
+
+        </div>
+        
+        <!-- Menu de navegação -->
+        <nav id="menu"> 
+            <img id="logo-nav" src="img/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="">
+
+            <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML/historia.html">Sobre nós</a></li>
+                <li><a href="HTML/doacao.html">Doações</a></li>
+                <li><button>Doe Agora</button></li>
             </ul>
+        </nav>
+
+        <!-- Info header -->
+        <div id="main-header">
+
+            <div id="info-header">
+                <h1>Lar de apoio à pessoa com Câncer</h1>
+                <p>A LAPEC promove acolhimento e dignidade para quem enfrenta o câncer. Para seguir com esse projeto, precisamos da sua doação.</p>
+                
+                <a href="HTML/doacao.html" id="button-doacao"><i class="fa-solid fa-heart"></i>Apoiar Agora</a>
+                
+            </div>
+    
+            <div id="equipe-lapec">
+                <img src="IMG/Banner-pages/Equipe-LAPEC 1.png" alt="">
+            </div>
+
+        </div>
     </header>
-    <aside class="aside">
-        <div class="container">
-            <h1>Lar de apoio à pessoa com Câncer</h1>
-            <p>A LAPEC promove acolhimento e dignidade para quem enfrenta o câncer. Para seguir com esse projeto, precisamos da sua doação.</p>
-            <div>
-                <div class="btn">
-                    <button class="donation-btn"><img src="IMG/heart.png" alt="">Apoiar Agora</button>
-                </div>
-                <div class="container-equipe">
-                    <img src="IMG/Equipe-LAPEC.png" alt="">
-                </div>
-            </div>
-        </div>
-    </aside>
-    <aside class="aside2">
-        <h1>Conheça nossa causa</h1>
-        <div class="caixa-aside2">
-            <div class="caixa1">
-                <img src="IMG/acolhimento.png" alt="">
-                <h2>Acolhimento</h2>
-                <p>Oferecemos acolhimento e dignidade para quem enfrenta o câncer e o HIV.</p>
-            </div>
-            <div class="caixa2">
-                <img src="IMG/auxilio.png" alt="">
-                <h2>Auxílio</h2>
-                <p>Ajudamos com exames, medicamentos, fraldas e suplementos para garantir a continuidade do tratamento.</p>
-            </div>
-            <div class="caixa3">
-                <img src="IMG/recursos.png" alt="">
-                <h2>Recursos</h2>
-                <p>O auxílio financeiro da LAPEC vem das doações e serve para amparar nossos pacientes em cada etapa da luta.</p>
-            </div>
-        </div>
-    </aside>
+
+    <main id="conteudo-principal">
+  <section id="nossa-causa">
+    <section id="equipe-multi">
+      <img src="IMG/tela-incial/Conheca-nossa-causa/equipe-multi-index.svg" alt="equipe">
+      <h2 class="titulo">Conheça nossa causa</h2>
+      <p><strong>Equipe multidisciplinar pronta para acolher e ajudar quem precisa.</strong> Promovemos saúde e cidadania através de atendimentos com psicólogo, nutricionista e fisioterapeuta, suporte jurídico e oficinas terapêuticas de artesanato, e tudo isso só é possivel graças às doações.</p>
+    </section>
+
+    <ul class="cards-causa">
+      <li>
+        <article>
+          <img src="IMG/tela-incial/Conheca-nossa-causa/acolhimento-index.svg" alt="">
+          <h3>Acolhimento</h3>
+          <p>Oferecemos acolhimento e dignidade para quem enfrenta o câncer e o HIV.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <img src="IMG/tela-incial/Conheca-nossa-causa/auxilio-index.svg" alt="">
+          <h3>Auxílio</h3>
+          <p>Fornecemos exames, medicamentos, fraldas, suplementos e cestas básicas. Também viabilizamos próteses e cadeiras de rodas para quem mais precisa.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <img src="IMG/tela-incial/Conheca-nossa-causa/recursos.-index.svg" alt="">
+          <h3>Recursos</h3>
+          <p>O auxílio financeiro da LAPEC vem das doações e serve para amparar nossos pacientes em cada etapa da luta.</p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section id="nossa-historia">
+    <h2 id="titulo-historia">Conheça nossa história</h2>
+    <p>...</p>
+    <a href="HTML/historia.html">Saiba mais</a>
+  </section>
+</main>
+
+
     <footer>
         <h1>Seja a diferença na vida de quem mais precisa</h1>
         <div class="galeria">
@@ -96,6 +146,7 @@
             &copy; 2026 Desenvolvido por Fabrica do Bem.
         </p>
     </footer>
+    <script src="https://kit.fontawesome.com/72ef3aac6d.js" crossorigin="anonymous"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>

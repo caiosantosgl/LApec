@@ -1,211 +1,272 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Signika:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Poppins:wght@400;700&family=Signika:wght@300..700&display=swap');
+@charset "UTF-8";
 
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "poppins";
+    box-sizing: border-box;
+    font-family: var(--normal-font), Arial, Helvetica, sans-serif;
 }
 
-header{
-    background-color: #194E80;
-    height: 60px;
-    position: sticky;
+:root{
+    --title-font: 'Lexend', Arial;
+    --normal-font: 'Poppins', Arial;
+    --topbar-background:#0F3A62;
+    --nav-background: #194E80;
+    --rosa-escuro:#BB3E8E;
+    --rosa-claro:#EB4796;
+    
+    --azul:#205F9D;
+    --rosa-title-bloco:#A13179;
+    --cinza:#555555;
+    --cinza-escuro:#2E2E2E;
+
+}
+
+/* Topbar: estilos base compartilhados entre as versões mobile e desktop. */
+#topbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-header ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    padding-right: 20px;
-}
-
-
-header ul li:first-child{
-   margin-right: auto;
-   display: flex;
-   align-items: center;
-   margin-left: 40px;
-}
-
-
-header ul li a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    transition: background 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul li a:hover{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul li a:active{
-    transition: scale(0.95);
-}
-
-header ul li a.donation{
-    background-color: #EB4796;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-header ul li a.donation:hover{
-    color: #000000;
-}
-
-.logo{
     height: 40px;
-}
+    padding: 0px 24px;
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 280px;
-    z-index: 200;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: #194E80;
-}
-
-.sidebar li{
-    height: 60px;
-    position: relative;
-    top: 30px;
-}
-
-.sidebar .donation2{
-    background-color: #EB4796;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin-left: 20px
-}
-
-.sidebar .donation2:hover{
-    color: #000000;
-}
-
-.aside{
-    margin: 0;
-    padding: 0;
-    width: 99.2vw;
-    height: 700px;
-    background: linear-gradient(to bottom, #205F9D 5%,#5C4A8F 80%, rgba(187, 62, 142, 0.9));
-    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.9);
-}
-
-.aside .container{
-    display: flex;
-    flex-direction: column;
-    padding: 150px;
-    margin-left: 80px;
-    gap: 80px;
-    font-size: 17px;
-}
-
-.aside p, h1{
-    max-width: 400px;
-    text-align: center;
+    background-color: var(--topbar-background);
+    font-size: 14px;
     color: white;
 
-}
+} 
+/* mobile */
+#topbar #info-mobile{gap: 14px;}
+/* desktop */
+#topbar #info-desktop{gap: 16px;}
 
-.aside .donation-btn{
-    background-color: #EB4796;
-    color: white;
-    font-family: "Poppins", "sans-serif";
-    font-weight: 600;
-    font-style: normal;
-    border-radius: 15px;
-    padding: 10px 15px;
-    font-size: 15px;
+/* Ajustes do button do topbar */
+.topb{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: "Poppins";
-    font-weight: 100;
-}
-
-.container .btn{
-    margin-left: 120px;
-}
-
-.container-equipe{
-    display: flex;
-    justify-content: flex-end;
     flex-direction: row;
-    margin-top: -444px;
-    margin-right: 50px;
-    margin-left: 700px;
-    height: auto;
-    width: 800px;
-}
-
-.aside2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    gap: 100px;
+
+    gap: 6px;
+    height: 10px;
+    padding: 12px 14px;
+
+    font-weight: 500;
+    font-size: 13px;
+    background-color: white;
+    color: var(--topbar-background);
+    border: none;
+    border-radius: 6px;
+    
 }
 
-.aside2 h1{
-    color: #3491E6;
-    font-family: "Poppins";
+
+
+/* === MEDIAS QUERY TOPBAR === */
+
+@media screen and (max-width:700px) {/* Mobile: mostra info-mobile e oculta bloco desktop */
+    
+    #topbar #info-mobile{display: flex;}
+    #info-mobile > #pix-mobile{display: none;}
+    #topbar #info-desktop{display: none;} 
+
 }
 
-.caixa-aside2{
-    gap: 150px;
+@media screen and (min-width: 701px) and (max-width: 1099px) { /* Tablet: mantém layout mobile e adiciona informações */
+    #topbar #info-mobile,#pix-mobile {display: flex;}
+    #info-mobile > #bnt-pix{display: none;}
+    #topbar #info-desktop{display: none;}
+
+}
+
+@media screen and (min-width:1100px) {/* Desktop: mostra info-desktop e oculta bloco mobile */
+    #topbar  #info-mobile{display: none;}
+    #topbar  #info-desktop{display: flex;}
+    
+}/* Fim dos medias query topbar*/
+
+#menu{
     display: flex;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 24px;
+    width: 100%;
+    height: 70px;
+    
+    font-size: 16px;
+    background-color: var(--nav-background);
+}
+
+#logo-nav{height: 50px;}
+
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 34px;
+
+    list-style-type: none;
+}
+
+#nav li > a{
+
+    text-decoration: none;
+    font-weight: 500;
     color: white;
 }
 
-.caixa1, .caixa2, .caixa3{
-    background-color: #BB3E8E;
-    border-radius: 15px;
+#nav li > button{
+
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    
+    border: none;
+    background-color: #BB3E8E ;
+    font-weight: 600;
+    color: white;
+    
+}
+
+/* Menu hamburguer: oculto no modelo desktop */
+#menu-toggle{
+    height: 54px;
+
+    font-size: 26px;
+    color: white;
+
+    background-color: initial;
+    border: none;
+
+
+}
+
+/* === Media query menu ===*/
+
+@media screen and (max-width: 800px) { /* Mobile: reduz altura e oculta navegação */
+    #menu{height: 64px;}
+    #logo-nav{height: 45px;}
+    #nav{display: none;} 
+}
+
+@media screen and (min-width: 801px){/* Desktop: oculta botão hamburguer */
+
+    #menu-toggle{display: none;}
+
+}/*fim media query menu*/
+
+
+/* == INFORMAÇÕES DO HEADER== */
+
+#main-header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center; 
+
+    padding: 0px 24px;
+
+    font-size: 19px;
+    color: white;
+    background: #BB3E8E;
+    background: linear-gradient(0deg, rgba(187, 62, 142, 1) 0%, rgba(32, 95, 157, 1) 100%, rgba(92, 74, 143, 1) 55%);
+}
+
+/* Textos e button */
+#info-header{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    max-width: 300px;
+    flex: 1 1 576px; 
+    
+    gap: 34px;
+    padding: 15px 20px;
+
+}
+#info-header  h1{
+    max-width: 650px;
+
+    font: 700 3em var(--title-font);
+}
+#info-header  p{
+    max-width: 500px;
+}
+#button-doacao{
+    max-width: 185px;
+    padding: 12px 18px;
+
+    font-weight: 600;
+    font-size: 16px;
     text-align: center;
-    gap: 15px;
-    padding: 25px;
+    color: white;
+    background-color: var(--rosa-claro);
+    text-decoration: none;
+    border-radius: 18px;
+
+}
+#info-header #button-doacao > i{
+    padding-right:10px ;
 }
 
-footer{
-    background-color: #194E80;
-    color: white;
+/* Foto da equipe */
+#equipe-lapec{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 15px;
+    flex: 1 1 576px;
+
 }
+#equipe-lapec img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+
+}
+/* fim das informação do header */
+
+/* ==MEDIAS QUERY HEADER== */
+
+/* Celular */
+@media screen and (min-width:320px) and (max-width:1219px){
+
+    #main-header{
+        position: relative;
+        padding: 28px 14px 0 14px ;
+    }
+    #info-header{
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+    #info-header h1 { font-size: clamp(1.8em, 5vw, 2.5em); }
+
+    #info-header p {font-size: clamp(16px, 2.5vw, 20px);}
+    #button-doacao{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+
+    }
+}
+
+/* Section Conheça nossa causa */
+
+#nossa-causa{
+    display: grid;
+    grid-template: 1fr 1fr ;
+}
+
+
 
 footer .copy{
     margin-top: 20px;
@@ -281,7 +342,7 @@ footer .baseboard a{
         padding-bottom: 10px;
     }
 
-    .aside .container{
+    .aside .main-header{
         padding: 40px 20px;
         margin-left: 0;
         gap: 30px;
@@ -315,14 +376,14 @@ footer .baseboard a{
         margin-right: 120px;
     }
 
-    .container-equipe{
+    .main-header-equipe{
         margin: 0;
         justify-content: center;
         position: relative;
         top: 50px;
     }
 
-    .container-equipe img{
+    .main-header-equipe img{
         max-width: 40%;
         height: auto;
     }
