@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- LÓGICA DO MENU HAMBÚRGUER ---
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav");
 
@@ -9,8 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             navMenu.classList.toggle("active");
         });
     }
-
-    // --- LÓGICA DE CÓPIA (SUA LÓGICA ORIGINAL) ---
+    
     const buttons = document.querySelectorAll(".topb");
     const pixKey = "42365439000168";
     const phoneContact = "(83) 99834-0051 / (83) 99834-0054";
