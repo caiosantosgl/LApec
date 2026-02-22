@@ -9,13 +9,19 @@
 </head>
 <body>
     <header>
+        <!-- Barra superior com informações de contato e pix -->
         <div id="topbar">
-            <div class="logo-topbar"><i class="fa-solid fa-heart"></i> Contribua</div>
+            <!-- Área do botão "Contribua" -->
+            <div class="logo-topbar">
+                <i class="fa-solid fa-heart"></i> Contribua
+            </div>
+            <!-- Informações exibidas no desktop -->
             <div id="info-desktop">
                 <p id="pix">Pix CNPJ: 42365 439/0001-68</p>
-                <button class="topb" ><i class="fa-regular fa-copy"></i>Copiar chave</button>
+                <button class="topb"><i class="fa-regular fa-copy"></i>Copiar chave</button>
                 <p id="contato">Contato: (83) 99834-0051 / (83) 99834-0054 </p>
             </div>
+            <!-- Informações exibidas no mobile -->
             <div id="info-mobile">
                 <div id="pix-mobile" style="gap: 14px;">
                     <p>CNPJ: 42365 439/0001-68</p>
@@ -25,15 +31,20 @@
                 <button class="topb" id="contato-mobile"><i class="fa-solid fa-phone"></i></button>
             </div>
         </div>
-
+        
+        <!-- Menu de navegação principal -->
         <nav id="menu"> 
-            <img id="logo-nav" src="IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="Logo LApec">
-
-            <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <!-- Logo da ONG -->
+            <img id="logo-nav" src="../IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="">
+            <!-- Botão do menu hamburguer (mobile) -->
+            <button id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- Lista de links do menu -->
             <ul id="nav">
-                <li><a href="index.html" class="link-nav">Home</a></li>
-                <li><a href="HTML/historia.html" class="link-nav">Sobre nós</a></li>
-                <li><a href="HTML/doacao.html" id="doe-btn">Doe Agora!</a></li>
+                <li><a href="../index.html" class="link-nav">Home</a></li>
+                <li><a href="historia.html" class="link-nav">Sobre nós</a></li>
+                <li><a href="doacao.html" id="doe-btn">Doe Agora!</a></li>
             </ul>
         </nav>
 
@@ -131,10 +142,10 @@
  
 </main>
 
+    <!-- Rodapé do site -->
     <footer class="main-footer">
-
         <div class="footer-logo-container">
-            <img src="IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="Logo LAPEC" class="logo-lapec">
+            <img src="../IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="Logo LAPEC" class="logo-lapec">
         </div>
 
         <hr class="footer-line">
@@ -144,16 +155,18 @@
                 <h3>Informação de Contato:</h3>
                 <div class="contact-list">
                     <div class="contact-item">
-                        <img src="IMG/icons-footer/Email.svg" alt="Email" class="footer-icon">
+                        <img src="../IMG/icons-footer/Email.svg" alt="Email" class="footer-icon">
                         <p><a href="mailto:lapecasaapoio@gmail.com">lapecasaapoio@gmail.com</a></p>
                     </div>
+
                     <div class="contact-item">
-                        <img src="IMG/icons-footer/WhatsApp.svg" alt="WhatsApp" class="footer-icon">
+                        <img src="../IMG/icons-footer/WhatsApp.svg" alt="WhatsApp" class="footer-icon">
                         <p>(83) 99834-0051 / (83) 99834-0054</p>
                     </div>
+
                     <div class="contact-item">
-                        <img src="IMG/icons-footer/Instragram.svg" alt="Instagram" class="footer-icon">
-                        <p><a href="https://www.instagram.com/lapec.pb/">Lapec.pb</a></p>
+                        <img src="../IMG/icons-footer/WhatsApp.svg" alt="Instagram" class="footer-icon">
+                        <p><a href="https://www.instagram.com/lapec.pb/" target="_blank" rel="follow">Lapec.pb</a></p>
                     </div>
                 </div>
             </div>
@@ -161,15 +174,15 @@
             <div class="info-column">
                 <h3>Endereço:</h3>
                 <div class="contact-item align-top">
-                    <img src="IMG/icons-footer/Local-icon.svg" alt="Local" class="footer-icon">
-                    <p>Rua Monsenhor Almeida nº 714<br>
-                    Bairro: Jaguaribe, cidade: João Pessoa PB</p>
+                    <img src="../IMG/icons-footer/Local-icon.svg" alt="Local" class="footer-icon">
+                    <p>
+                        Rua Monsenhor Almeida nº 714<br>
+                        Bairro: Jaguaribe, cidade: João Pessoa PB
+                    </p>
                 </div>
             </div>
         </section>
-
         <hr class="footer-line">
-
     </footer>
 
     <script src="https://kit.fontawesome.com/72ef3aac6d.js" crossorigin="anonymous"></script>
