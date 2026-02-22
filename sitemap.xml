@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://caiosantosgl.github.io/LApec/</loc>
-    <priority>1.0</priority>
+    <loc>https://lapec.vercel.app/</loc>
+    <lastmod>2026-02-22</lastmod>
+    <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://caiosantosgl.github.io/LApec/HTML/historia.html</loc>
-    <priority>0.8</priority>
+    <loc>https://lapec.vercel.app/HTML/historia.html</loc>
+    <lastmod>2026-02-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://lapec.vercel.app/HTML/doacao.html</loc>
+    <lastmod>2026-02-22</lastmod>
+    <priority>0.90</priority>
   </url>
 
 </urlset>
