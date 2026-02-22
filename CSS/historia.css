@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
+/* Importação das fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* (Repetido) Importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Variáveis globais de cores e fontes */
 :root{
     --nav-background:#194E80;
     --normal-font: 'Poppins', Arial;
@@ -14,6 +17,7 @@
     --azul-claro: #2D84DA;
 }
 
+/* Reset básico: remove margens padrão e padroniza box model */
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +27,7 @@
 
 /* Topbar: estilos base compartilhados entre as versões mobile e desktop. */
 #topbar{
-    display: flex;
+    display: flex; /* Alinha itens horizontalmente */
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
@@ -84,6 +88,7 @@
     #topbar  #info-desktop{display: flex;}
 }/* Fim dos medias query topbar*/
 
+/* Barra de navegação principal */
 #menu{
     display: flex;
     flex-flow: row nowrap;
@@ -100,6 +105,7 @@
 
 #logo-nav{height: 50px;}
 
+/* Lista de links do menu */
 #nav{
     display: flex;
     justify-content: space-evenly;
@@ -109,6 +115,7 @@
     list-style-type: none;
 }
 
+/* Botão "Doe Agora" */
 #doe-btn {
     height: 40px;
     padding: 12px 24px;
@@ -126,12 +133,14 @@
     background-color: #ff2fb3;
 }
 
+/* Links do menu */
 #nav li > a.link-nav{
     text-decoration: none;
     font-weight: 500;
     color: white;
 }
 
+/* Efeito hover dos links */
 #nav li > a.link-nav:hover {
     background-color: white;
     color: var(--nav-background);
@@ -142,10 +151,8 @@
 /* Menu hamburguer: oculto no modelo desktop */
 #menu-toggle{
     height: 54px;
-
     font-size: 26px;
     color: white;
-
     background-color: initial;
     border: none;
 }
@@ -155,12 +162,13 @@
 @media screen and (max-width: 800px) { 
     #menu {
         height: 64px;
-        position: relative; 
+        position: relative; /* Base para o menu absoluto */
     }
+
     #logo-nav { height: 45px; }
     
     #nav {
-        display: none; 
+        display: none; /* Esconde o menu inicialmente */
         flex-direction: column;
         position: absolute;
         top: 64px;
@@ -175,7 +183,7 @@
     }
 
     #nav.active {
-        display: flex;
+        display: flex; /* Mostra o menu quando ativado via JS */
     }
 
     #nav li {
@@ -195,10 +203,11 @@
 
 /*fim media query menu*/
 
+/* Banner principal com imagem e gradiente */
 .banner {
     min-height: 400px;
     width: 100%;
-    display: flex;
+    display: flex; /* Centraliza o conteúdo */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -227,6 +236,7 @@
     font-size: 1em;
 }
 
+/* Primeira seção (imagem + texto) */
 .container-p1 {
     display: flex;
     flex-flow: row nowrap;
@@ -265,7 +275,7 @@
     margin-top: 80px;
     margin-bottom: 60px;
 
-    display: grid;
+    display: grid; /* Layout em grade */
     grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
     justify-content: center;
     align-items: start;
@@ -286,6 +296,7 @@
     margin-bottom: 16px;
 }
 
+/* Seção de depoimentos */
 .container-p3 {
     display: flex;
     justify-content: center;
@@ -293,6 +304,7 @@
     flex-flow: row wrap;
 }
 
+/* Card de cada pessoa */
 .pessoa {
     flex: 1;
     background-color: var(--rosa);
@@ -338,13 +350,13 @@
     text-align: center;
 }
 
+/* Seção Instagram */
 #insta {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-flow: column nowrap;
-
     margin-top: 120px;
 }
 
@@ -367,6 +379,7 @@
     text-decoration: underline;
 }
 
+/* Rodapé */
 .main-footer {
     background-color: var(--nav-background); /* Azul profundo conforme a imagem */
     color: white;
@@ -413,13 +426,11 @@
     gap: 15px; 
 }
 
-
 .contact-item {
     display: flex;
     align-items: center; 
     gap: 12px; 
 }
-
 
 .contact-item.align-top {
     align-items: flex-start;
