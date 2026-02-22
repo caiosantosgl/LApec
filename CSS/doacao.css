@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--normal-font), Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --title-font: 'Lexend', Arial;
+    --normal-font: 'Poppins', Arial;
+    --topbar-background:#0F3A62;
+    --nav-background: #194E80;
+    --rosa-escuro:#BB3E8E;
+    --rosa-claro:#EB4796;
+
+    --azul:#205F9D;
+    --background-blocos:#FAFAFA;
+    --rosa-title-bloco:#A13179;
+    --cinza:#555555;
+    --cinza-escuro:#2E2E2E;
+}
+
+/* Topbar: estilos base compartilhados entre as versões mobile e desktop. */
+#topbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+    padding: 0px 24px;
+
+    background-color: var(--topbar-background);
+    font-size: 14px;
+    color: white;
+} 
+
+/* mobile */
+#topbar #info-mobile{gap: 14px;}
+/* desktop */
+#topbar #info-desktop{gap: 16px;}
+
+/* Ajustes do button do topbar */
+.topb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    height: 10px;
+    padding: 12px 14px;
+
+    font-weight: 500;
+    font-size: 13px;
+    background-color: white;
+    color: var(--topbar-background);
+    border: none;
+    border-radius: 6px;  
+}
+
+.topb:hover {
+    cursor: pointer;
+}
+
+/* === MEDIAS QUERY TOPBAR === */
+
+@media screen and (max-width:700px) {/* Mobile: mostra info-mobile e oculta bloco desktop */
+    #topbar #info-mobile{display: flex;}
+    #info-mobile > #pix-mobile{display: none;}
+    #topbar #info-desktop{display: none;} 
+}
+
+@media screen and (min-width: 701px) and (max-width: 1099px) { /* Tablet: mantém layout mobile e adiciona informações */
+    #topbar #info-mobile,#pix-mobile {display: flex;}
+    #info-mobile > #bnt-pix{display: none;}
+    #topbar #info-desktop{display: none;}
+}
+
+@media screen and (min-width:1100px) {/* Desktop: mostra info-desktop e oculta bloco mobile */
+    #topbar  #info-mobile{display: none;}
+    #topbar  #info-desktop{display: flex;}
+}/* Fim dos medias query topbar*/
+
+#menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 24px;
+    width: 100%;
+    height: 70px;
+    
+    font-size: 16px;
+    background-color: var(--nav-background);
+}
+
+#logo-nav{height: 50px;}
+
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 34px;
+
+    list-style-type: none;
+}
+
+#doe-btn {
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    
+    border: none;
+    background-color: #BB3E8E ;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: background-color .8s;
+}
+
+#doe-btn:hover {
+    background-color: #ff2fb3;
+}
+
+#nav li > a.link-nav{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+#nav li > a.link-nav:hover {
+    background-color: white;
+    color: var(--nav-background);
+    border-radius: 16px;
+    padding: 10px 16px;
+}
+
+#nav li > button{
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    
+    border: none;
+    background-color: #BB3E8E ;
+    font-weight: 600;
+    color: white;  
+}
+
+/* Menu hamburguer: oculto no modelo desktop */
+#menu-toggle{
+    height: 54px;
+
+    font-size: 26px;
+    color: white;
+
+    background-color: initial;
+    border: none;
+}
+
+/* === Media query menu ===*/
+
+@media screen and (max-width: 800px) { 
+    #menu {
+        height: 64px;
+        position: relative; /* Base para o menu absoluto */
+    }
+
+    #logo-nav { height: 45px; }
+    
+    #nav {
+        display: none; /* Esconde o menu inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-background);
+        padding: 30px 20px;
+        gap: 30px;
+        z-index: 1000;
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+        align-items: center;
+    }
+
+    #nav.active {
+        display: flex; /* Mostra o menu quando ativado via JS */
+    }
+
+    #nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav li > a.link-nav:hover {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 801px){
+    #menu-toggle { display: none; }
+    #nav { display: flex; } /* Garante que o menu apareça no desktop */
+}
+
+/*fim media query menu*/
+
+/*====================== Colocando o Banner do Header ======================*/
+.banner {
+    min-height: 400px;
+    width: 100%;
+    display: flex; /* Centraliza o conteúdo */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+    background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Banner Doações.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.content h1{
+    font-family: var(--fonte-lexend);
+    font-weight: bolder;
+    font-size: 2.5em;
+    margin-bottom: 16px;
+}
+
+.content p {
+    font-family: var(--fonte-lexend);
+    font-size: 1em;
+}
+
+/* Deixando o Banner responsivo */
+@media screen and (max-width: 768px) {
+    .banner {background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/WhatsApp\ Image\ 2025-10-17\ at\ 13.38.51.jpeg");}
+}/* Fim das configurações do Banner */
+
+/*=================================== Conteúdo (Main) daqui pra baixo até o início do footer =================================*/
+
+/* ============================= Início do footer ==========================*/
+.main-footer {
+    background-color: var(--nav-background); /* Azul profundo conforme a imagem */
+    color: white;
+    padding: 40px 10%;
+    margin-top: 50px;
+}
+
+.footer-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-lapec {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 70%;
+    margin: auto;
+}
+
+.info-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center; 
+    gap: 12px; 
+}
+
+
+.contact-item.align-top {
+    align-items: flex-start;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+    flex-shrink: 0; 
+}
+
+.contact-item p {
+    margin: 0; 
+    font-size: 0.95rem;
+}
+
+.rodape a{
+    color: white;
+    font-weight: bold;
+}
+
+/* Media Query footer responsivo */
+@media screen and (max-width: 768px) {
+    .rodape {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .info-column {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .rodape {
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .info-column {
+        width: 50%;
+    }
+} /* Fim da responsividade do footer */
+/*========================== Fim do footer ==========================*/
