@@ -17,8 +17,9 @@
     --nav-background: #194E80;
     --rosa-escuro:#BB3E8E;
     --rosa-claro:#EB4796;
-    
+
     --azul:#205F9D;
+    --background-blocos:#FAFAFA;
     --rosa-title-bloco:#A13179;
     --cinza:#555555;
     --cinza-escuro:#2E2E2E;
@@ -262,173 +263,175 @@
 /* Section Conheça nossa causa */
 
 #nossa-causa{
-    display: grid;
-    grid-template: 1fr 1fr ;
+    padding: 65px 24px;
 }
 
+/* BLOCO SUPERIOR */
+
+#equipe-multi{
+    max-width: 780px;
+    margin: 0 auto 60px auto;
+    text-align: center;
 
 
-footer .copy{
-    margin-top: 20px;
+
+}
+
+#equipe-multi img{
+    width: 110px;
+    margin-bottom: 18px;
+}
+
+#equipe-multi .titulo{
+    font-family: var(--title-font);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin-bottom: 18px;
+
+    color: var(--azul);
+}
+
+#equipe-multi p{
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: var(--cinza);
+}
+
+#equipe-multi strong{
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+
+    color: var(--cinza-escuro);
+}
+
+/* LISTA DE CARDS */
+
+.cards-causa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.cards-causa li{
+    display: flex;
+    flex: 1 1 320px;
+    max-width: 360px;
+}
+
+/* CARD */
+
+.cards-causa li article{
+    width: 100%;
+    padding: 38px 30px;
+    border-radius: 16px;
+
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    transition: .3s ease;
+}
+
+.cards-causa li article:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ÍCONE */
+
+.cards-causa li article img{
+    width: 100px;
+    height: 100px;
+    padding: 16px;
     margin-bottom: 20px;
-    font-size: 10px;
+
+    border-radius: 50%;
+    background-color: #FCE8F3;
 }
 
-footer h1{
-    font-family: "Carattere", "cursive";
-    font-weight: 200;
-    font-size: 39px;
-    max-width: 600px;
-    margin-top: 20px;
+/* TÍTULO DO CARD */
+
+.cards-causa h3{
+    font-family: var(--title-font);
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+
+    color: var(--rosa-title-bloco);
 }
 
-.galeria{
-    margin-top: 20px;
+/* TEXTO DO CARD */
+
+.cards-causa p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    color: var(--cinza);
 }
 
-footer .logo-baseboard{
-    height: 80px;
-    margin-top: 40px;
-    margin-bottom: 30px;
+/* Media query */
+
+@media (min-width: 1100px){
+
+    #nossa-causa{padding: 110px 24px;}
+    #equipe-multi{margin-bottom: 80px;}
 }
 
-footer .baseboard{
+/* == SECTION NOSSA HISTÓRIA == */
+
+#nossa-historia{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    width: 70%;
-}
+    gap: 35px;
 
-footer .baseboard h2{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 19px;
-}
-
-footer .baseboard p{
-    margin-bottom: 10px;
-    padding: 0 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .baseboard img{
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    padding: 5px; 
-}
-
-footer .baseboard a{
-    text-decoration: none;
+    min-height: 400px;
+    padding: 54px 24px;
+    
+    text-align: center;
     color: white;
+    background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Lapec-banner.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/*Mobile e tablets*/
-@media (max-width: 1024px){
-    .hideMobile{
-        display: none;
-    }
+#nossa-historia h2{
 
-    .aside{
-        height: auto;
-        width: 100vw;
-        padding-bottom: 10px;
-    }
+    font-family:var(--title-font);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+#nossa-historia p{
 
-    .aside .main-header{
-        padding: 40px 20px;
-        margin-left: 0;
-        gap: 30px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
+    max-width: 640px;
 
-    .aside h1, .aside p{
-        max-width: 100%;
-        font-size: 22px;
-    }
+    text-align: justify;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.cta{
+    
+    width: 160px;
+    padding: 8px 18px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: solid 2px var(--rosa-claro);
+    border-radius: 28px;
 
-    .aside .donation-btn{
-        margin-left: 0;
-        width: 100%;
-        max-width: 150px;
-        font-size: 13px;
-        margin-top: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    transition: .5s;
+}
+.cta:hover{
 
-    .btn{
-        display: flex;
-        justify-content: center;
-        z-index: 10;
-        position: relative;
-        top: 290px;
-        margin-right: 120px;
-    }
-
-    .main-header-equipe{
-        margin: 0;
-        justify-content: center;
-        position: relative;
-        top: 50px;
-    }
-
-    .main-header-equipe img{
-        max-width: 40%;
-        height: auto;
-    }
-
-    .aside2 {
-        gap: 60px;
-        margin-top: 60px;
-        padding: 0 50px;
-    }
-
-    .caixa-aside2 {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .caixa1, .caixa2, .caixa3 {
-        max-width: 90%;
-        width: 90%;
-    }
-
-    footer .galeria{
-        display: flex;
-    }
-
-    footer .galeria img{
-        width: 90%;
-        margin: 15px auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    footer .baseboard{
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer .baseboard p{
-        padding: 0 5px;
-    }
+    background-color: var(--rosa-claro);
 }
 
-@media (min-width: 1024px){
-    .hideDesktop{
-        display: none;
-    }
-}
-/*fim mobile e tablets*/
