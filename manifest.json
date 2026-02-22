@@ -1,15 +1,27 @@
 {
   "name": "LAPEC - Lar de Apoio à Pessoa com Câncer",
   "short_name": "LAPEC",
-  "start_url": "/LApec/",
+  "description": "ONG em João Pessoa que oferece acolhimento e apoio a pessoas com câncer.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#e63946",
+  "theme_color": "#c62828",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "/LApec/IMG/favi.ico",
+      "src": "/IMG/favi.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/IMG/favi.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/IMG/favi.ico",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/x-icon"
     }
   ]
 }
