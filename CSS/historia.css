@@ -1,0 +1,519 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --nav-background:#194E80;
+    --normal-font: 'Poppins', Arial;
+    --topbar-background:#0F3A62;
+    --fonte-lexend: 'Lexend', Arial;
+    --azul-roxo: #205F9D;
+    --rosa: #C84799;
+    --azul-claro: #2D84DA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--normal-font);
+}
+
+/* Topbar: estilos base compartilhados entre as versões mobile e desktop. */
+#topbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+    padding: 0px 24px;
+
+    background-color: var(--topbar-background);
+    font-size: 14px;
+    color: white;
+} 
+
+/* mobile */
+#topbar #info-mobile{gap: 14px;}
+/* desktop */
+#topbar #info-desktop{gap: 16px;}
+
+/* Ajustes do button do topbar */
+.topb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    height: 10px;
+    padding: 12px 14px;
+
+    font-weight: 500;
+    font-size: 13px;
+    background-color: white;
+    color: var(--topbar-background);
+    border: none;
+    border-radius: 6px;  
+}
+
+.topb:hover {
+    cursor: pointer;
+}
+
+/* === MEDIAS QUERY TOPBAR === */
+
+@media screen and (max-width:700px) {/* Mobile: mostra info-mobile e oculta bloco desktop */
+    #topbar #info-mobile{display: flex;}
+    #info-mobile > #pix-mobile{display: none;}
+    #topbar #info-desktop{display: none;} 
+}
+
+@media screen and (min-width: 701px) and (max-width: 1099px) { /* Tablet: mantém layout mobile e adiciona informações */
+    #topbar #info-mobile,#pix-mobile {display: flex;}
+    #info-mobile > #bnt-pix{display: none;}
+    #topbar #info-desktop{display: none;}
+}
+
+@media screen and (min-width:1100px) {/* Desktop: mostra info-desktop e oculta bloco mobile */
+    #topbar  #info-mobile{display: none;}
+    #topbar  #info-desktop{display: flex;}
+}/* Fim dos medias query topbar*/
+
+#menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 24px;
+    width: 100%;
+    height: 70px;
+    
+    font-size: 16px;
+    background-color: var(--nav-background);
+}
+
+#logo-nav{height: 50px;}
+
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 34px;
+
+    list-style-type: none;
+}
+
+#doe-btn {
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    
+    border: none;
+    background-color: #BB3E8E ;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: background-color .8s;
+}
+
+#doe-btn:hover {
+    background-color: #ff2fb3;
+}
+
+#nav li > a.link-nav{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+#nav li > a.link-nav:hover {
+    background-color: white;
+    color: var(--nav-background);
+    border-radius: 16px;
+    padding: 10px 16px;
+}
+
+#nav li > button{
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    
+    border: none;
+    background-color: #BB3E8E ;
+    font-weight: 600;
+    color: white;  
+}
+
+/* Menu hamburguer: oculto no modelo desktop */
+#menu-toggle{
+    height: 54px;
+
+    font-size: 26px;
+    color: white;
+
+    background-color: initial;
+    border: none;
+}
+
+/* === Media query menu ===*/
+
+@media screen and (max-width: 800px) { 
+    #menu {
+        height: 64px;
+        position: relative; /* Para posicionar o nav absoluto */
+    }
+    #logo-nav { height: 45px; }
+    
+    /* Esconde o nav por padrão no mobile */
+    #nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-background);
+        padding: 20px;
+        gap: 20px;
+        z-index: 1000;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Classe que o JS vai adicionar para mostrar o menu */
+    #nav.active {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 801px){
+    #menu-toggle { display: none; }
+    #nav { display: flex; } /* Garante que o menu apareça no desktop */
+}
+
+/*fim media query menu*/
+
+.banner {
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+    background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Fundo-Historia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.content h1{
+    font-family: var(--fonte-lexend);
+    font-weight: bolder;
+    font-size: 2.5em;
+    margin-bottom: 16px;
+}
+
+.content p {
+    font-family: var(--fonte-lexend);
+    font-size: 1em;
+}
+
+.container-p1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+
+    margin: auto;
+    margin-top: 50px;
+
+    width: 65%;
+    padding: 16px;
+}
+
+.container-p1 {
+    text-align: justify;
+}
+
+.container-p1 img {
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.462);
+}
+
+.conteudo-p1 h1 {
+    margin-bottom: 32px;
+    color: var(--azul-roxo);
+}
+
+/* Seção Missão, Visão e Valores */
+.container-p2 {
+    background-color: var(--azul-roxo);
+    padding: 80px 24px; /* Ajuste leve no padding lateral */
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    justify-content: center;
+    align-items: start;
+    gap: 120px;
+}
+
+/* Ajuste nos artigos internos para comportamento de grid item */
+.missao, .visão, .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.container-p2 img {
+    width: 168px;
+    margin-bottom: 16px;
+}
+
+.container-p3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.pessoa {
+    flex: 1;
+    background-color: var(--rosa);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    margin: 50px 20px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.201);
+}
+
+.pessoa h2 {
+    font-size: 1.55em;
+    margin-bottom: 8px;
+}
+
+.pessoa p {
+    font-size: .85em;
+    text-align: justify;
+    margin-bottom: 24px;
+}
+
+.pessoa a {
+    background-color: var(--azul-claro);
+    padding: 12px 24px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    transition: background-color .8s;
+}
+
+.pessoa a:hover {
+    background-color: rgb(36, 182, 255);
+    text-decoration: underline;
+}
+
+.pessoa img {
+    border-radius: 50%;
+}
+
+.h1 {
+    color: var(--azul-roxo);
+    text-align: center;
+}
+
+#insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: column nowrap;
+
+    margin-top: 120px;
+}
+
+#insta img {
+    width: 300px;
+}
+
+#insta a {
+    background-color: var(--rosa);
+    color: white;
+    margin-top: 22px;
+    padding: 14px 26px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: background-color .8s;
+}
+
+#insta a:hover {
+    background-color: #ff35b5;
+    text-decoration: underline;
+}
+
+.main-footer {
+    background-color: var(--nav-background); /* Azul profundo conforme a imagem */
+    color: white;
+    padding: 40px 10%;
+    margin-top: 50px;
+}
+
+.footer-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-lapec {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 70%;
+    margin: auto;
+}
+
+.info-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center; 
+    gap: 12px; 
+}
+
+
+.contact-item.align-top {
+    align-items: flex-start;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+    flex-shrink: 0; 
+}
+
+.contact-item p {
+    margin: 0; 
+    font-size: 0.95rem;
+}
+
+.rodape a{
+    color: white;
+    font-weight: bold;
+}
+
+/* Media Query footer responsivo */
+@media screen and (max-width: 768px) {
+    .rodape {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .info-column {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .rodape {
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .info-column {
+        width: 50%;
+    }
+} /* Fim da responsividade do footer */
+
+/* Deixando Responsivo o resto */
+@media screen and (max-width: 768px) {
+    .banner {
+        background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Captura\ de\ tela\ 2026-02-13\ 150252.png");
+    }
+
+    .container-p1 {
+        flex-wrap: wrap;
+        text-align: justify;
+        gap: 50px;
+    }
+
+    .container-p1 h1 {
+        text-align: left;
+    }
+
+    .container-p1 img {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .banner {
+        background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Captura\ de\ tela\ 2026-02-13\ 150252.png");
+    }
+
+    .container-p1 {
+        flex-wrap: wrap;
+        text-align: justify;
+        gap: 50px;
+    }
+
+    .container-p1 h1 {
+        text-align: left;
+    }
+
+    .container-p3 {
+        flex-flow: column wrap;
+        width: 70%;
+        margin: auto;
+    }
+}
+/* Fim do resto da Responsividade */
