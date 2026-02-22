@@ -235,7 +235,7 @@
 .content h1{
     font-family: var(--fonte-lexend);
     font-weight: bolder;
-    font-size: 2.5em;
+    font-size:clamp(1.8rem, 3vw, 2.6rem);
     margin-bottom: 16px;
 }
 
@@ -250,6 +250,282 @@
 }/* Fim das configurações do Banner */
 
 /*=================================== Conteúdo (Main) daqui pra baixo até o início do footer =================================*/
+
+/* Título padrão das seções */
+
+.titulo{
+    width: 100%;
+    text-align: center;
+
+    color: var(--azul);
+    font-family: var(--title-font);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+}
+.subtitulo{
+    max-width: 700px;
+    margin: 15px auto 50px;
+    font-size: 1rem;
+    color: var(--cinza);
+}
+
+/* === SECTION DOAÇÃO === */
+
+#pix-qrcode{
+    padding: 60px 16px 0 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/* Área que organiza Pix + QR */
+
+.area-doacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Card principal */
+
+.card-doacao{
+    background: linear-gradient(135deg, var(--rosa-escuro), #a83270);
+    color: white;
+
+    padding: 40px 30px;
+    border-radius: 24px;
+
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    transition: .3s ease;
+}
+
+/*Imagem do pix*/
+.card-doacao img{
+    height: 100px;
+    width: auto;
+}
+
+/* CNPJ destacado */
+
+.cnpj{
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+
+/* Botão principal */
+
+.btn-doar{
+
+    padding: 14px 28px;
+    border-radius: 28px;
+
+    background-color: white;
+    color: var(--rosa-escuro);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.btn-doar:hover{
+    background-color: #f8d8eb;
+}
+
+/* QR code */
+
+.qr-area {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.qr-area.ativo {
+    max-height: 400px;
+    opacity: 1;
+}
+.qr-area img{
+    height: 200px;
+    border-radius: 12px;
+}
+ .seta{
+    transition: .5s;
+ }
+.btn-qr{
+    background-color: white;
+    border: none;
+}
+/* === SECTION PARA ONDE VAI SUA DOAÇÃO === */
+
+#sua-doacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 30px;
+    padding: 60px 16px 24px 16px;
+
+    text-align: center;
+}
+
+
+/* Lista de blocos */
+
+#sua-doacao .blocos-doacao{
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.blocos-doacao h3{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+
+    color: var(--cinza);
+    font-weight: 700;
+}
+
+
+/* Cada item da lista */
+
+.blocos-doacao li{
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    padding: 16px 18px;
+
+    list-style: none;
+    border-radius: 14px;
+
+    color: white;
+    background: linear-gradient(135deg, #246fb6, #0f5eb2);
+
+    transition: .3s ease;
+}
+
+.blocos-doacao li:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.blocos-doacao img{
+    max-width: 34px;
+}
+
+
+/* Texto interno */
+
+.blocos-doacao div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+.titulo-bloco{
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.descricao-bloco{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+
+
+/* === SECTION CONTATO === */
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+    margin: 60px 16px;
+
+    text-align: center;
+}
+
+#contato p{
+    max-width: 650px;
+    color: var(--cinza-escuro);
+}
+
+#info-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 24px;
+    width: 100%;
+}
+
+#info-contato li{
+    list-style: none;
+}
+
+#info-contato img{
+    height: 38px;
+    width: auto;
+
+    transition: .3s ease;
+}
+
+#info-contato img:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* === RESPONSIVIDADE DESKTOP === */
+/* A partir de 992px as seções passam a se organizar em colunas */
+
+@media (min-width: 992px){
+
+    #pix-qrcode{
+        padding: 65px 24px 0 24px;
+    }
+
+    #sua-doacao{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        gap: 60px
+    }
+
+    #sua-doacao .titulo{
+        width: 100%;
+    }
+
+    #sua-doacao .blocos-doacao{
+        max-width: 480px;
+    }
+}
 
 /* ============================= Início do footer ==========================*/
 .main-footer {

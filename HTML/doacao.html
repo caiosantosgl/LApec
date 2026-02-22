@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doações</title>
+    <title>LAPEC</title>
     <link rel="stylesheet" href="../CSS/doacao.css">
     <link rel="shortcut icon" href="../IMG/favi.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/6ddd87d8dc.js" crossorigin="anonymous"></script>
@@ -53,17 +53,204 @@
         <!-- Banner da página -->
         <div class="banner">
             <div class="content">
-                <h1>Contribua com nossa causa</h1>
+                <h1 class="titulo" style="color: white;">Contribua com nossa causa</h1>
                 <p>Cada doação ajuda a manter medicamentos, exames e alimentação para pessoas em tratamento contra o câncer. Doe qualquer valor.</p>
             </div>
         </div>
     </header>
 
     <!-- Início do Main -->
-    <main>
+<main>
 
-    </main>
-    <!-- Fim do Main -->
+    <section id="pix-qrcode">
+
+        <h2 class="titulo">Sua doação transforma vidas</h2>
+        <p class="subtitulo">
+            Com sua ajuda, conseguimos oferecer apoio, tratamento e dignidade
+            a pessoas em luta contra o câncer.
+        </p>
+
+        <div class="area-doacao">
+
+            <!-- Card Pix -->
+            <div class="card-doacao">
+
+                <h3>Transferência via Pix</h3>
+
+                <img src="../IMG/tela-doacao/contribuir-doacao-icons/pix.svg" alt="Ícone Pix">
+
+                <div class="dados-pix">
+                    <p><strong>Instituição:</strong><br>
+                        LAR DE APOIO A PESSOAS COM CÂNCER - LAPEC
+                    </p>
+
+                    <p class="cnpj">
+                        CNPJ: 42.365.439/0001-68
+                    </p>
+                </div>
+
+                <a href="#" class="btn-doar">
+                    <i class="fa-regular fa-copy"></i>
+                    Copiar chave Pix
+                </a>
+
+            </div>
+
+            <!-- QR Code -->
+            <div class="qr-area">
+                <img src="../IMG/tela-doacao/contribuir-doacao-icons/qrcode-pix.png"
+                    alt="QR Code para doação via Pix">
+                <p>Ou escaneie o QR Code</p>
+            </div>
+            <button class="btn-qr">
+                Escanear QR Code
+                <span><i class="fa-solid fa-angle-down seta"></i></span>
+            </button>
+
+        </div>
+
+
+
+    </section>
+
+
+    <!-- === SECTION PARA ONDE VAI SUA DOAÇÃO === -->
+    <section id="sua-doacao">
+
+        <h2 class="titulo">Para onde vai sua doação?</h2>
+
+        <!-- Coluna 1 -->
+        
+        <ul class="blocos-doacao">
+            <h3>Suporte Assistencial</h3>
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/cadeira-rodas.svg" alt="Ícone cadeira de rodas">
+                <div>
+                    <h4 class="titulo-bloco">Cadeira de rodas</h4>
+                    <p class="descricao-bloco">Garantindo mobilidade e autonomia aos pacientes.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/protese.svg" alt="Ícone prótese">
+                <div>
+                    <h4 class="titulo-bloco">Prótese</h4>
+                    <p class="descricao-bloco">Reabilitação e qualidade de vida.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/alimentos.svg" alt="Ícone alimentos">
+                <div>
+                    <h4 class="titulo-bloco">Alimentos</h4>
+                    <p class="descricao-bloco">Suporte nutricional essencial durante o tratamento.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/cesta-basica.svg" alt="Ícone cesta básica">
+                <div>
+                    <h4 class="titulo-bloco">Cesta básica</h4>
+                    <p class="descricao-bloco">Apoio às famílias em situação de vulnerabilidade.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/remedio.svg" alt="Ícone medicamentos">
+                <div>
+                    <h4 class="titulo-bloco">Medicamentos</h4>
+                    <p class="descricao-bloco">Tratamentos contínuos e assistência farmacêutica.</p>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- Coluna 2 -->
+        
+        <ul class="blocos-doacao">
+            <h3>Apoio Multiprofissional</h3>
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/fisioterapia.svg" alt="Ícone fisioterapia">
+                <div>
+                    <h4 class="titulo-bloco">Fisioterapia</h4>
+                    <p class="descricao-bloco">Recuperação física e fortalecimento muscular.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/psicologo.svg" alt="Ícone psicólogo">
+                <div>
+                    <h4 class="titulo-bloco">Psicólogo</h4>
+                    <p class="descricao-bloco">Acolhimento emocional durante todo o processo.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/orientacao-juridica.svg" alt="Ícone orientação jurídica">
+                <div>
+                    <h4 class="titulo-bloco">Orientação jurídica</h4>
+                    <p class="descricao-bloco">Suporte legal para garantir direitos dos pacientes.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/oficinas.svg" alt="Ícone oficinas">
+                <div>
+                    <h4 class="titulo-bloco">Oficinas de artesanato</h4>
+                    <p class="descricao-bloco">Atividades terapêuticas que fortalecem autoestima.</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="../IMG/tela-doacao/doacao-icons/nutricionista.svg" alt="Ícone nutricionista">
+                <div>
+                    <h4 class="titulo-bloco">Nutricionista</h4>
+                    <p class="descricao-bloco">Plano alimentar adequado às necessidades clínicas.</p>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- === SECTION CONTATO === -->
+    <section id="contato">
+
+        <h2 class="titulo">Precisa de ajuda?</h2>
+
+        <p class="subtitulo">
+            Precisa de informações adicionais? Entre em contato com nossa equipe 
+            e tire todas as suas dúvidas sobre nossa atuação e formas de ajudar.
+        </p>
+
+        <!-- Área de ícones de contato -->
+        <ul id="info-contato">
+
+            <li>
+                <a href="https://www.instagram.com/lapec.pb" target="_blank">
+                    <img src="../IMG/tela-doacao/contatos-ajuda-icons/Frame 77.svg" alt="Instagram">
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:lapecasaapoio@gmail.com">
+                    <img src="../IMG/tela-doacao/contatos-ajuda-icons/Frame 78.svg" alt="E-mail">
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="../IMG/tela-doacao/contatos-ajuda-icons/Frame 79.svg" alt="Telefone">
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+</main>
+<!-- Fim do Main -->
 
     <!-- Rodapé do site -->
     <footer class="main-footer">
