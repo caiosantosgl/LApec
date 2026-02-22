@@ -225,43 +225,74 @@
 .content h1{
     font-family: var(--fonte-lexend);
     font-weight: bolder;
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
     margin-bottom: 16px;
 }
 
 .content p {
     font-family: var(--fonte-lexend);
+    font-weight: 400;
     font-size: 1em;
 }
 
-/* Primeira seção (imagem + texto) */
-.container-p1 {
+/* == Primeira seção (imagem + texto) == */
+
+#lar-history{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
-    gap: 200px;
-
-    margin: auto;
-    margin-top: 50px;
-
-    width: 65%;
-    padding: 16px;
+    padding: 40px 16px;
 }
 
-.container-p1 {
+.container-p1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+
     text-align: justify;
 }
 
-.container-p1 img {
-    width: 450px;
+.container-p1 img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
     border-radius: 16px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.462);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.conteudo-p1 h1 {
-    margin-bottom: 32px;
+.conteudo-p1{
+    max-width: 650px;
+    margin-top: 40px;
+}
+
+.conteudo-p1 h1{
+    margin-bottom: 24px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    text-align: left;
+
     color: var(--azul-roxo);
+}
+
+
+/* A partir de 992px a seção passa a funcionar em duas colunas */
+
+@media (min-width: 992px){
+
+    #lar-history{padding: 54px 24px;}
+
+    .container-p1{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 56px;
+        text-align: left;
+
+    }
 }
 
 /* Seção Missão, Visão e Valores */
@@ -304,12 +335,13 @@
 
 /* Card de cada pessoa */
 .pessoa {
-    flex: 1;
+    flex: 0 1 500px;
     background-color: var(--rosa);
     padding: 40px;
     text-align: center;
     color: white;
     margin: 50px 20px;
+    height: 440px;
     border-radius: 16px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.201);
 }
@@ -322,12 +354,14 @@
 .pessoa p {
     font-size: .85em;
     text-align: justify;
-    margin-bottom: 24px;
+    max-width: 380px;
+    padding-bottom: 34px;
 }
 
 .pessoa a {
     background-color: var(--azul-claro);
     padding: 12px 24px;
+    margin-bottom: 10px;
     border-radius: 16px;
     text-decoration: none;
     color: white;
@@ -485,23 +519,9 @@
     .banner {
         background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Captura\ de\ tela\ 2026-02-13\ 150252.png");
     }
-
-    .container-p1 {
-        flex-wrap: wrap;
-        text-align: justify;
-        gap: 50px;
-    }
-
-    .container-p1 h1 {
-        text-align: left;
-    }
-
-    .container-p1 img {
-        width: 350px;
-    }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px){
+@media screen and (min-width: 900px) and (max-width: 1200px){
     .banner {
         background-image: linear-gradient(#194e80c1, #194e80c1), url("../IMG/Banner-pages/Captura\ de\ tela\ 2026-02-13\ 150252.png");
     }
@@ -516,10 +536,5 @@
         text-align: left;
     }
 
-    .container-p3 {
-        flex-flow: column wrap;
-        width: 70%;
-        margin: auto;
-    }
 }
 /* Fim do resto da Responsividade */
