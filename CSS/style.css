@@ -103,6 +103,27 @@
     background-color: var(--nav-background);
 }
 
+/* Classe que ativa o menu fixo */
+#menu.fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    animation: slideDown .3s ease;
+}
+
+/* Animação suave */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
 #logo-nav{height: 50px;}
 
 #nav{

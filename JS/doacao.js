@@ -95,3 +95,16 @@ btnQr.addEventListener("click", () => {
     }
 
 });
+// == MENU FIXO ==
+const menu = document.getElementById("menu");
+const topbar = document.getElementById("topbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > topbar.offsetHeight) {
+        menu.classList.add("fixo");
+    } else {
+        menu.classList.remove("fixo");
+    }
+
+});
