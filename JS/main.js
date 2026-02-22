@@ -1,31 +1,44 @@
-function showSidebar(){
-    const sidebar = document.querySelector(".sidebar");
-    sidebar.style.display = 'flex';
-}
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- LÓGICA DO MENU HAMBÚRGUER ---
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav");
 
-function hideSidebar(){
-    const sidebar = document.querySelector(".sidebar");
-    sidebar.style.display = 'none';
-}
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+    }
 
-function copiarNumero(elemento){
-    var numeroTexto = elemento.innerText || elemento.textContent;
-    navigator.clipboard.writeText(numeroTexto).then(function(){
-        console.log('Número copiado com sucesso!!');
-        alert('Número copiado com sucesso!!')
-    }).catch(function(err){
-        console.error('Erro ao copiar o número');
-        alert('Falha ao copiar o Número');
+    // --- LÓGICA DE CÓPIA (SUA LÓGICA ORIGINAL) ---
+    const buttons = document.querySelectorAll(".topb");
+    const pixKey = "42365439000168";
+    const phoneContact = "(83) 99834-0051 / (83) 99834-0054";
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const textToCopy = (button.id === "contato-mobile") ? phoneContact : pixKey;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalContent = button.innerHTML;
+
+                if (button.innerText.trim() !== "") {
+                    button.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+                } else {
+                    button.innerHTML = '<i class="fa-solid fa-check"></i>';
+                }
+
+                button.style.backgroundColor = "#28a745";
+                button.style.color = "white";
+
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.style.backgroundColor = "";
+                    button.style.color = "";
+                }, 2000);
+            }).catch(err => {
+                console.error("Erro ao copiar: ", err);
+            });
+        });
     });
-}
-
-function copiarEmail(elemento){
-    var emailTexto = elemento.innerText || elemento.textContent;
-    navigator.clipboard.writeText(emailTexto).then(function(){
-        console.log('E-mail copiado com sucesso!');
-        alert('E-mail copiado com sucesso!')
-    }).catch(function(err){
-        console.error('Erro ao copiar o número');
-        alert('Falha ao copiar o Número');
-    });
-}
+});

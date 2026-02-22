@@ -5,50 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAPEC</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="IMG/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
 
-        <!-- Topbar -->
         <div id="topbar">
-
             <div class="logo-topbar"><i class="fa-solid fa-heart"></i> Contribua</div>
-            
-            <!--Topbar Desktop-->
             <div id="info-desktop">
-
                 <p id="pix">Pix CNPJ: 42365 439/0001-68</p>
                 <button class="topb" ><i class="fa-regular fa-copy"></i>Copiar chave</button>
                 <p id="contato">Contato: (83) 99834-0051 / (83) 99834-0054 </p>
-                
             </div>
-            
-            <!-- Topbar mobile -->
             <div id="info-mobile">
-
                 <div id="pix-mobile" style="gap: 14px;">
                     <p>CNPJ: 42365 439/0001-68</p>
                     <button class="topb"><i class="fa-regular fa-copy"></i></button>
                 </div>
-
-
                 <button class="topb" id="bnt-pix"><i class="fa-brands fa-pix"></i></button>
                 <button class="topb" id="contato-mobile"><i class="fa-solid fa-phone"></i></button>
-
             </div>
-
         </div>
-        
-        <!-- Menu de navegação -->
+
         <nav id="menu"> 
-            <img id="logo-nav" src="img/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="">
+            <img id="logo-nav" src="../IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="">
 
             <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
             <ul id="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="HTML/historia.html">Sobre nós</a></li>
-                <li><a href="HTML/doacao.html">Doações</a></li>
-                <li><button>Doe Agora</button></li>
+                <li><a href="../index.html" class="link-nav">Home</a></li>
+                <li><a href="../HTML/historia.html" class="link-nav">Sobre nós</a></li>
+                <li><a href="../HTML/doacao.html" id="doe-btn">Doe Agora!</a></li>
             </ul>
         </nav>
 
@@ -112,48 +98,74 @@
         <!-- BLOCO  NOSSA HISTÓRIA -->
         <section id="nossa-historia">
             <h2>Conheça nossa história</h2>
-            <p>A LAPEC tem como objetivo o bem estar físico e psicológico dos seus usuários, nossos programas são voltados a pessoas de baixa renda e que estão em situação de vulnerabilidade social. Dessa forma,a Instituição LAPEC Lar de A poio a Pessoas Com Câncer, conta com a sua solidariedade, acreditando ser a responsabilidade social, um fator fundamental para a efetivação de uma melhor qualidade de vida daqueles mais necessitados.</p>
+            <p class="paragrafo">A LAPEC tem como objetivo o bem estar físico e psicológico dos seus usuários, nossos programas são voltados a pessoas de baixa renda e que estão em situação de vulnerabilidade social. Dessa forma,a Instituição LAPEC Lar de A poio a Pessoas Com Câncer, conta com a sua solidariedade, acreditando ser a responsabilidade social, um fator fundamental para a efetivação de uma melhor qualidade de vida daqueles mais necessitados.</p>
             <a href="HTML/historia.html" class="cta">Saiba mais</a>
+        </section>
+
+        <!-- BLOCO CONTRIBUIR -->
+        <section id="nos-ajude">
+            <img src="IMG/tela-incial/Galeria-pessoas/contribua.png" alt="homem com sua doação em mãos">
+
+            <div id="info-contribuir">
+                <h2>Nos ajude a continuar</h2>
+                <p class="paragrafo">No Lar de Apoio, acreditamos que ninguém deve lutar contra o câncer sozinho por falta de recursos. Através da sua doação, garantimos assistência social, suplementação alimentar e cuidados jurídicos para quem mais precisa.</p>
+                
+                <p class="paragrafo">Muitas vezes, o que separa um paciente do seu tratamento é a condição financeira. Ao doar, você remove essa barreira. Você não está apenas entregando uma quantia; você está oferecendo uma nova chance. Não espere para ajudar: o momento de ser a diferença é agora.</p>
+                <a href="HTML/doacao.html" class="cta">Contribuir</a>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Seja a diferença na vida de quem mais precisa</h2>
+
+            <div class="grid-galeria">
+                <img src="IMG/tela-incial/Galeria-pessoas/1.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/2.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/3.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/4.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/5.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/6.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/7.png" alt="">
+                <img src="IMG/tela-incial/Galeria-pessoas/8.png" alt="">
+            </div>
         </section>
  
 </main>
-
-
-    <footer>
-        <h1>Seja a diferença na vida de quem mais precisa</h1>
-        <div class="galeria">
-            <div>
-                <img src="IMG/Rectangle 2.png" alt="">
-                <img src="IMG/Rectangle 3.png" alt="">
-                <img src="IMG/Rectangle 4.png" alt="">
-                <img src="IMG/Rectangle 5.png" alt="">
-            </div>
-            <div>
-                <img src="IMG/Rectangle 6.png" alt="">
-                <img src="IMG/Rectangle 7.png" alt="">
-                <img src="IMG/Rectangle 8.png" alt="">
-                <img src="IMG/Rectangle 9.png" alt="">
-            </div>
+<footer class="main-footer">
+        <div class="footer-logo-container">
+            <img src="../IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png" alt="Logo LAPEC" class="logo-lapec">
         </div>
-        <img src="IMG/logo.png" alt="" class="logo-baseboard">
-        <div class="baseboard">
-            <div>
-                <h2>Informação de Contato</h2>
-                <p onclick="copiarEmail(this)"><img src="IMG/carta.png" alt=""><a href="#">lapecasaapoio@gmail.com</a></p>
-                <p onclick="copiarNumero(this)"><img src="IMG/what.png" alt="">(83) 99834-0051 / (83) 99834-0054</p>
-                <p><a href=""><img src="IMG/insta.png" alt="">Lapec.pb</a></p>
-            </div>
-            <div>
-                <div>
-                    <h2>Endereço</h2>
-                    <p><img src="IMG/maps.png" alt="">Rua Monsenhor Almeida n° 714 <br> Bairro: Jaguaribe, cidade: João Pessoa PB</p>
+        <hr class="footer-line">
+        <section class="rodape">
+            <div class="info-column">
+                <h3>Informação de Contato:</h3>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <img src="../IMG/icons-footer/Email.svg" alt="Email" class="footer-icon">
+                        <p><a href="mailto:lapecasaapoio@gmail.com">lapecasaapoio@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../IMG/icons-footer/WhatsApp.svg" alt="WhatsApp" class="footer-icon">
+                        <p>(83) 99834-0051 / (83) 99834-0054</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../IMG/icons-footer/WhatsApp.svg" alt="Instagram" class="footer-icon">
+                        <p><a href="https://www.instagram.com/lapec.pb/">Lapec.pb</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <p class="copy">
-            &copy; 2026 Desenvolvido por Fabrica do Bem.
-        </p>
+            <div class="info-column">
+                <h3>Endereço:</h3>
+                <div class="contact-item align-top">
+                    <img src="../IMG/icons-footer/Local-icon.svg" alt="Local" class="footer-icon">
+                    <p>Rua Monsenhor Almeida nº 714<br>
+                    Bairro: Jaguaribe, cidade: João Pessoa PB</p>
+                </div>
+            </div>
+        </section>
+        <hr class="footer-line">
     </footer>
+
     <script src="https://kit.fontawesome.com/72ef3aac6d.js" crossorigin="anonymous"></script>
     <script src="JS/main.js"></script>
 </body>
