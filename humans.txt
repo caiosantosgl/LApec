@@ -1,0 +1,8 @@
+Projeto: LAPEC - Lar de Apoio à Pessoa com Câncer
+Tipo: ONG - Organização sem fins lucrativos
+Cidade: João Pessoa - PB - Brasil
+
+Website: https://caiosantosgl.github.io/LApec
+Tecnologias: HTML, CSS, JavaScript
+Desenvolvedor: Caio Santos
+GitHub: https://github.com/caiosantosgl

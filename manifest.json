@@ -1,0 +1,15 @@
+{
+  "name": "LAPEC - Lar de Apoio à Pessoa com Câncer",
+  "short_name": "LAPEC",
+  "start_url": "/LApec/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e63946",
+  "icons": [
+    {
+      "src": "/LApec/IMG/favi.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
