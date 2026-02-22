@@ -2,28 +2,24 @@
   "@context": "https://schema.org",
   "@type": "NGO",
   "name": "LAPEC - Lar de Apoio à Pessoa com Câncer",
-  "url": "https://caiosantosgl.github.io/LApec",
-  "logo": "https://caiosantosgl.github.io/LApec/IMG/favi.ico",
-  "image": "https://caiosantosgl.github.io/LApec/IMG/Banner-pages/Equipe-LAPEC%201.png",
-  "description": "A LAPEC é uma ONG localizada em João Pessoa - PB que oferece acolhimento, auxílio social e apoio no tratamento de pessoas com câncer.",
-  "foundingDate": "2021-10-08",
+  "url": "https://lapec.vercel.app",
+  "logo": "https://lapec.vercel.app/IMG/Banner-pages/nav-bar/imagem_2026-01-08_115851619-removebg-preview 2.png",
+  "image": "https://lapec.vercel.app/IMG/Banner-pages/Equipe-LAPEC 1.png",
+  "description": "ONG em João Pessoa que oferece acolhimento, auxílio social e apoio no tratamento de pessoas com câncer.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Monsenhor Almeida nº 714",
+    "streetAddress": "Rua Monsenhor Almeida, 714",
     "addressLocality": "João Pessoa",
     "addressRegion": "PB",
-    "postalCode": "58000-000",
+    "postalCode": "58020-240",
     "addressCountry": "BR"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "João Pessoa"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "contactType": "customer support",
     "telephone": "+55-83-99834-0051",
-    "email": "lapecasaapoio@gmail.com"
+    "contactType": "customer service",
+    "areaServed": "BR",
+    "availableLanguage": ["Portuguese"]
   },
   "sameAs": [
     "https://www.instagram.com/lapec.pb/"
