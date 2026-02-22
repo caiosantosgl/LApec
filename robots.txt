@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://caiosantosgl.github.io/LApec/sitemap.xml
+Sitemap: https://lapec.vercel.app/sitemap.xml
