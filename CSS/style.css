@@ -144,17 +144,6 @@
     padding: 10px 16px;
 }
 
-#nav li > button{
-    height: 40px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    
-    border: none;
-    background-color: #BB3E8E ;
-    font-weight: 600;
-    color: white;  
-}
-
 /* Menu hamburguer: oculto no modelo desktop */
 #menu-toggle{
     height: 54px;
@@ -171,28 +160,37 @@
 @media screen and (max-width: 800px) { 
     #menu {
         height: 64px;
-        position: relative; /* Para posicionar o nav absoluto */
+        position: relative; /* Base para o menu absoluto */
     }
+
     #logo-nav { height: 45px; }
     
-    /* Esconde o nav por padrão no mobile */
     #nav {
-        display: none; 
+        display: none; /* Esconde o menu inicialmente */
         flex-direction: column;
         position: absolute;
         top: 64px;
         left: 0;
         width: 100%;
         background-color: var(--nav-background);
-        padding: 20px;
-        gap: 20px;
+        padding: 30px 20px;
+        gap: 30px;
         z-index: 1000;
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+        align-items: center;
     }
 
-    /* Classe que o JS vai adicionar para mostrar o menu */
     #nav.active {
-        display: flex;
+        display: flex; /* Mostra o menu quando ativado via JS */
+    }
+
+    #nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav li > a.link-nav:hover {
+        padding: 10px 20px;
     }
 }
 
