@@ -27,7 +27,7 @@
 
 /* Topbar: estilos base compartilhados entre as versões mobile e desktop. */
 #topbar{
-    display: flex;
+    display: flex; /* Alinha itens horizontalmente */
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
@@ -88,6 +88,7 @@
     #topbar  #info-desktop{display: flex;}
 }/* Fim dos medias query topbar*/
 
+/* Barra de navegação principal */
 #menu{
     display: flex;
     flex-flow: row nowrap;
@@ -122,8 +123,10 @@
     }
 }
 
+
 #logo-nav{height: 50px;}
 
+/* Lista de links do menu */
 #nav{
     display: flex;
     justify-content: space-evenly;
@@ -133,6 +136,7 @@
     list-style-type: none;
 }
 
+/* Botão "Doe Agora" */
 #doe-btn {
     height: 40px;
     padding: 12px 24px;
@@ -150,12 +154,14 @@
     background-color: #ff2fb3;
 }
 
+/* Links do menu */
 #nav li > a.link-nav{
     text-decoration: none;
     font-weight: 500;
     color: white;
 }
 
+/* Efeito hover dos links */
 #nav li > a.link-nav:hover {
     background-color: white;
     color: var(--nav-background);
@@ -163,24 +169,11 @@
     padding: 10px 16px;
 }
 
-#nav li > button{
-    height: 40px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    
-    border: none;
-    background-color: #BB3E8E ;
-    font-weight: 600;
-    color: white;  
-}
-
 /* Menu hamburguer: oculto no modelo desktop */
 #menu-toggle{
     height: 54px;
-
     font-size: 26px;
     color: white;
-
     background-color: initial;
     border: none;
 }
@@ -652,4 +645,5 @@
     }
 } /* Fim da responsividade do footer */
 /*========================== Fim do footer ==========================*/
+
 
