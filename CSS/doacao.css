@@ -69,24 +69,33 @@
     cursor: pointer;
 }
 
-/* === MEDIAS QUERY TOPBAR === */
+/* === MEDIAS QUERY TOPBAR CORRIGIDO === */
 
-@media screen and (max-width:700px) {/* Mobile: mostra info-mobile e oculta bloco desktop */
-    #topbar #info-mobile{display: flex;}
-    #info-mobile > #pix-mobile{display: none;}
-    #topbar #info-desktop{display: none;} 
+@media screen and (max-width:700px) {
+    #topbar #info-mobile { display: flex; }
+    #info-mobile > #pix-mobile { display: none; }
+    #topbar #info-desktop { display: none; } 
 }
 
-@media screen and (min-width: 701px) and (max-width: 1099px) { /* Tablet: mantém layout mobile e adiciona informações */
-    #topbar #info-mobile,#pix-mobile {display: flex;}
-    #info-mobile > #bnt-pix{display: none;}
-    #topbar #info-desktop{display: none;}
+@media screen and (min-width: 701px) and (max-width: 1099px) {
+    #topbar #info-mobile, #pix-mobile { display: flex; }
+    #info-mobile > #bnt-pix { display: none; }
+    #topbar #info-desktop { display: none; }
 }
 
-@media screen and (min-width:1100px) {/* Desktop: mostra info-desktop e oculta bloco mobile */
-    #topbar  #info-mobile{display: none;}
-    #topbar  #info-desktop{display: flex;}
-}/* Fim dos medias query topbar*/
+@media screen and (min-width:1100px) {
+    #topbar #info-mobile { display: none; }
+    #topbar #info-desktop { 
+        display: flex; 
+        align-items: center; 
+        flex-direction: row; /* Garante que fiquem um ao lado do outro */
+        gap: 16px; 
+    }
+    #topbar #info-desktop p {
+        margin: 0;
+        white-space: nowrap; /* Impede que o texto quebre linha */
+    }
+}
 
 /* Barra de navegação principal */
 #menu{
@@ -645,5 +654,6 @@
     }
 } /* Fim da responsividade do footer */
 /*========================== Fim do footer ==========================*/
+
 
 
