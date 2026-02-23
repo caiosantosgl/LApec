@@ -290,18 +290,22 @@
     margin-top: 40px;
 }
 
+.conteudo-p1 p{
+    color: #2E2E2E;
+}
+
 .conteudo-p1 h1{
     margin-bottom: 24px;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     text-align: left;
 
+    font-family: "Lexend", Arial, Helvetica, sans-serif;
     color: var(--azul-roxo);
 }
 
-
 /* A partir de 992px a seção passa a funcionar em duas colunas */
 
-@media (min-width: 992px){
+@media (min-width: 1200px){
 
     #lar-history{padding: 54px 24px;}
 
@@ -346,6 +350,10 @@
     margin-bottom: 16px;
 }
 
+.container-p2 h1{
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    margin-bottom: 18px;
+}
 /* Seção de depoimentos */
 .container-p3 {
     display: flex;
@@ -375,8 +383,7 @@
 .pessoa p {
     font-size: .85em;
     text-align: justify;
-    max-width: 380px;
-    padding-bottom: 34px;
+    padding:  0 16px 34px 16px;
 }
 
 .pessoa a {
